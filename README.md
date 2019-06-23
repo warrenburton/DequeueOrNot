@@ -25,7 +25,7 @@ The app is a basic Tab Controller with two view controllers.
 
 2. A `SwiftUI` based list with roughly the same layout as the `UIViewController` based version.
 
-The ``UIKit` cell was a custom XIB with two labels and a small image to ensure that this was not a trivial test of stock `UITableViewCell` instances called `ThingRow`
+The `UIKit` cell was a custom XIB with two labels and a small image to ensure that this was not a trivial test of stock `UITableViewCell` instances called `ThingRow`
 
 The dataset was a simple array of 500 `struct` items called `Thing` 
 
