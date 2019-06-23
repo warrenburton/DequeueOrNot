@@ -18,6 +18,9 @@ I made a lazy comment in SO comment about dequeing cells not being neccessary fr
 
 The app is a basic Tab Controller with two view controllers. 
 
+![](image/scene.jpeg)
+
+
 1. A `UIViewController` with a `UITableView` that can be either used in a **standard** dequeued mode or instantianting fresh cells for each row. 
 
 2. A `SwiftUI` based list with roughly the same layout as the `UIViewController` based version.
