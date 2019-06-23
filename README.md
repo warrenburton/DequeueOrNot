@@ -12,7 +12,7 @@ At least Xcode 11 Beta 2 or better. Catalina Beta 2 and some iOS 13 hardware mig
 
 ## Introduction
 
-I made a lazy comment in SO comment about dequeing cells not being neccessary from a *memory* perspective any longer as the underlying hardware no longer needs such aggressive memory management. One of the other posters quite correctly pulled me up on that statement and asked for sources. I don't remember and so I thought id figure out if dequeing is needed or not still.
+I made a lazy comment in SO comment about dequeing cells not being neccessary from a *memory* perspective any longer as the underlying hardware no longer needs such aggressive memory management. One of the other posters quite correctly pulled me up on that statement and asked for sources. I don't remember who or where and so I thought id figure out if dequeing is needed or not still.
 
 ## Test Harness 
 
@@ -76,8 +76,11 @@ Non-dequeued needs to that stuff AND dearchive a cell.
 
 SwiftUI is a black box but two things stood out:
 
-- Automatic text localisation seemed to be a heavy part of the render phase 
-- The entire system is doing a fuckton of work with super deep traces
+- Automatic text localisation seemed to be a heavy part of the render phase.
+
+- The entire system is doing a fuckton of work to render the list as CALayers with super deep traces.
+
+![](image/SwiftUI_trace.png)
 
 
 
@@ -86,7 +89,7 @@ SwiftUI is a black box but two things stood out:
 
 For a `UITableView` based list *should* you use cell recycling? Yes, you'll get the best frame rate for your table and make your customers happy.
 
-But you don't *need* to do it to keep your app from dying a memory death ( ARC is magic! ) and the frame rate was acceptable just not quite as smooth as the dequeued version. If you have a use case where you can't dequeue, it isn't going to be a deal breaker. 
+However you don't *need* to implement cell dequeueing to keep your app from dying a memory death ( ARC is magic! ) and the frame rate was acceptable just not quite as smooth as the dequeued version. If you have a use case where you can't dequeue e.g (many different cell prototypes) , it isn't going to be a deal breaker. 
 
 `SwiftUI` is a beta framework and will get better at doing lists so performance is probably not worth worrying about. Rest assured though it's probably not your code (maybe). 
 
