@@ -5,6 +5,8 @@ Investigation into what dequeuing tableview cells does in a modern iOS environme
 Inspired by a conversation in the comments of [this SO question](https://stackoverflow.com/questions/56525434/list-view-really-slow-and-laggy?noredirect=1#comment99991829_56525434) about lagginess in SwiftUI Lists I constructed a test harness to figure out what the effects of dequeing cells in a UITableView are.
 
 
+## Requires
 
+At least Xcode 11 Beta 2 or better. Catalina Beta 2 and some iOS 13 hardware might be useful too. 
 
 
