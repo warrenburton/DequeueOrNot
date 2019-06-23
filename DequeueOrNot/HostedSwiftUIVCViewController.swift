@@ -1,10 +1,16 @@
+//DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+//Version 2, December 2004
 //
-//  HostedSwiftUIVCViewController.swift
-//  DequeueOrNot
+//Copyright (C) 2019 Warren Burton
 //
-//  Created by Warren Burton on 22/06/2019.
-//  Copyright © 2019 Warren Burton. All rights reserved.
+//Everyone is permitted to copy and distribute verbatim or modified
+//copies of this license document, and changing it is allowed as long
+//as the name is changed.
 //
+//DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+//TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+//
+//0. You just DO WHAT THE FUCK YOU WANT TO.
 
 import UIKit
 import SwiftUI
@@ -12,19 +18,10 @@ import SwiftUI
 class HostedSwiftUIVCViewController: UIViewController {
 
     
-    func seedData() -> [Thing] {
-        
-        var target = [Thing]()
-        for index in 1..<500 {
-            target.append(Thing(id:index,guid:UUID().uuidString))
-        }
-        return target
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let hostingViewController = UIHostingController(rootView: SwiftUIView(things: seedData()))
+        let hostingViewController = UIHostingController(rootView: SwiftUIView(things: Thing.seedData()))
         
         view.embed(hostingViewController.view)
         addChild(hostingViewController)

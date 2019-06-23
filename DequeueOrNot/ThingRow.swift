@@ -14,38 +14,30 @@
 
 import SwiftUI
 
-
-struct SwiftUIView : View {
-    
-    var things = [Thing]()
+struct ThingRow: View {
+    var thing: Thing
     
     var body: some View {
-        List {
-            Text("Swift UI")
-            ForEach(things) { thing in
-                ThingRow(thing: thing)
+        HStack {
+            Image(uiImage: UIImage.swatch(thing.color, size: 64))
+            VStack(alignment: .leading) {
+                Text("Hello \(thing.id)")
+                Text(thing.guid)
+                    .font(.subheadline)
             }
         }
     }
-    
 }
+
+
 
 #if DEBUG
 
-
-struct SwiftUIView_Previews : PreviewProvider {
-    
-    static func seedData() -> [Thing] {
-        
-        var target = [Thing]()
-        for index in 1..<500 {
-            target.append(Thing(id:index,guid:UUID().uuidString, color: Thing.randomColor()))
-        }
-        return target
-    }
+struct ThingRow_Previews: PreviewProvider {
     
     static var previews: some View {
-        SwiftUIView(things: seedData())
+        ThingRow(thing: Thing(id: 10, guid: "foo", color: Thing.randomColor()))
     }
 }
+
 #endif

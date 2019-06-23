@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		AD26F4FA22BEB87600816E1C /* HostedSwiftUIVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26F4F922BEB87600816E1C /* HostedSwiftUIVCViewController.swift */; };
 		AD26F4FC22BEB97800816E1C /* UIView+AutolayoutHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26F4FB22BEB97800816E1C /* UIView+AutolayoutHelp.swift */; };
+		AD26F4FE22BF7F4600816E1C /* ThingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26F4FD22BF7F4600816E1C /* ThingRow.swift */; };
+		AD26F50022BF7F8700816E1C /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26F4FF22BF7F8700816E1C /* Thing.swift */; };
+		AD26F50222BF80DA00816E1C /* UIImage+Swatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26F50122BF80DA00816E1C /* UIImage+Swatch.swift */; };
+		AD26F50422BF825300816E1C /* ThingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD26F50322BF825300816E1C /* ThingCell.swift */; };
+		AD26F50622BF836100816E1C /* ThingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD26F50522BF836100816E1C /* ThingCell.xib */; };
 		AD3B1B0922BE4FA5006E7F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3B1B0822BE4FA5006E7F0D /* AppDelegate.swift */; };
 		AD3B1B0B22BE4FA5006E7F0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3B1B0A22BE4FA5006E7F0D /* ViewController.swift */; };
 		AD3B1B0E22BE4FA5006E7F0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD3B1B0C22BE4FA5006E7F0D /* Main.storyboard */; };
@@ -20,6 +25,11 @@
 /* Begin PBXFileReference section */
 		AD26F4F922BEB87600816E1C /* HostedSwiftUIVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedSwiftUIVCViewController.swift; sourceTree = "<group>"; };
 		AD26F4FB22BEB97800816E1C /* UIView+AutolayoutHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutolayoutHelp.swift"; sourceTree = "<group>"; };
+		AD26F4FD22BF7F4600816E1C /* ThingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingRow.swift; sourceTree = "<group>"; };
+		AD26F4FF22BF7F8700816E1C /* Thing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
+		AD26F50122BF80DA00816E1C /* UIImage+Swatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Swatch.swift"; sourceTree = "<group>"; };
+		AD26F50322BF825300816E1C /* ThingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingCell.swift; sourceTree = "<group>"; };
+		AD26F50522BF836100816E1C /* ThingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThingCell.xib; sourceTree = "<group>"; };
 		AD3B1B0522BE4FA5006E7F0D /* DequeueOrNot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DequeueOrNot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD3B1B0822BE4FA5006E7F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD3B1B0A22BE4FA5006E7F0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,9 +73,14 @@
 				AD3B1B0822BE4FA5006E7F0D /* AppDelegate.swift */,
 				AD3B1B0A22BE4FA5006E7F0D /* ViewController.swift */,
 				AD3B1B0C22BE4FA5006E7F0D /* Main.storyboard */,
+				AD26F50322BF825300816E1C /* ThingCell.swift */,
+				AD26F50522BF836100816E1C /* ThingCell.xib */,
 				AD26F4F922BEB87600816E1C /* HostedSwiftUIVCViewController.swift */,
 				AD57F1A722BE6234002AFF71 /* SwiftUIView.swift */,
+				AD26F4FF22BF7F8700816E1C /* Thing.swift */,
+				AD26F4FD22BF7F4600816E1C /* ThingRow.swift */,
 				AD26F4FB22BEB97800816E1C /* UIView+AutolayoutHelp.swift */,
+				AD26F50122BF80DA00816E1C /* UIImage+Swatch.swift */,
 				AD3B1B0F22BE4FA8006E7F0D /* Assets.xcassets */,
 				AD3B1B1122BE4FA8006E7F0D /* LaunchScreen.storyboard */,
 				AD3B1B1422BE4FA8006E7F0D /* Info.plist */,
@@ -131,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD26F50622BF836100816E1C /* ThingCell.xib in Resources */,
 				AD3B1B1322BE4FA8006E7F0D /* LaunchScreen.storyboard in Resources */,
 				AD3B1B1022BE4FA8006E7F0D /* Assets.xcassets in Resources */,
 				AD3B1B0E22BE4FA5006E7F0D /* Main.storyboard in Resources */,
@@ -145,10 +161,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD26F4FC22BEB97800816E1C /* UIView+AutolayoutHelp.swift in Sources */,
+				AD26F50422BF825300816E1C /* ThingCell.swift in Sources */,
+				AD26F4FE22BF7F4600816E1C /* ThingRow.swift in Sources */,
 				AD26F4FA22BEB87600816E1C /* HostedSwiftUIVCViewController.swift in Sources */,
 				AD3B1B0B22BE4FA5006E7F0D /* ViewController.swift in Sources */,
 				AD3B1B0922BE4FA5006E7F0D /* AppDelegate.swift in Sources */,
+				AD26F50222BF80DA00816E1C /* UIImage+Swatch.swift in Sources */,
 				AD57F1A822BE6234002AFF71 /* SwiftUIView.swift in Sources */,
+				AD26F50022BF7F8700816E1C /* Thing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
